@@ -1,8 +1,13 @@
 package com.example.controller;
 
 import com.example.entity.RestBean;
+import com.example.entity.dto.Client;
+import com.example.entity.vo.request.ClientDetailVO;
+import com.example.entity.vo.request.RuntimeDetailVO;
 import com.example.service.ClientService;
+import com.example.utils.Const;
 import jakarta.annotation.Resource;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,5 +21,20 @@ public class ClientController {
     public RestBean<Void> registerClient(@RequestHeader("Authorization") String token){
         return clientService.verifyAndRegister(token) ?
                 RestBean.success() : RestBean.failure(401,"注册失败");
+    }
+
+    @PostMapping("/detail")
+    public RestBean<Void> updateClientDetails(@RequestAttribute(Const.ATTR_CLIENT) Client client,
+                                              @RequestBody @Valid ClientDetailVO vo) {
+        clientService.updateClientDetail(vo, client);
+        return RestBean.success();
+    }
+
+
+    @PostMapping("/runtime")
+    public RestBean<Void> updateRuntimeDetail(@RequestAttribute(Const.ATTR_CLIENT) Client client,
+                                              @RequestBody @Valid RuntimeDetailVO vo){
+        clientService.updateRuntimeDetail(vo,client);
+        return RestBean.success();
     }
 }

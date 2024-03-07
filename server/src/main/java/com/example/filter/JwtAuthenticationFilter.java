@@ -45,10 +45,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 Client client = clientService.findClientByToken(authorization);
                 if(client == null){
                     response.setStatus(403);
+                    response.setCharacterEncoding("utf-8");
                     response.getWriter().write(RestBean.failure(403,"未注册").asJsonString());
                     return;
                 }else {
-                     request.setAttribute(Const.ATTR_Client,client);
+                     request.setAttribute(Const.ATTR_CLIENT,client);
                 }
             }
         }else {

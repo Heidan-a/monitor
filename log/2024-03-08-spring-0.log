@@ -1,0 +1,196 @@
+2024-03-08 18:06:34.160  INFO 26992 --- [main] (system) com.example.ServerApplication            : Starting ServerApplication using Java 17.0.8 with PID 26992 (C:\Users\yang2\Desktop\monitor\monitor\server\target\classes started by yang2 in C:\Users\yang2\Desktop\monitor\monitor)
+2024-03-08 18:06:34.162  INFO 26992 --- [main] (system) com.example.ServerApplication            : The following 1 profile is active: "dev"
+2024-03-08 18:06:34.913  INFO 26992 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-08 18:06:34.916  INFO 26992 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-08 18:06:34.939  INFO 26992 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2024-03-08 18:06:35.496  INFO 26992 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-08 18:06:35.504  INFO 26992 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-08 18:06:35.505  INFO 26992 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-03-08 18:06:35.607  INFO 26992 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-08 18:06:35.608  INFO 26992 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1409 ms
+2024-03-08 18:06:36.143  INFO 26992 --- [main] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-08 18:06:36.513  INFO 26992 --- [main] (system) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3909a854
+2024-03-08 18:06:36.514  INFO 26992 --- [main] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-08 18:06:37.082  INFO 26992 --- [main] (system) o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64fba3e6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58d79479, org.springframework.security.web.context.SecurityContextHolderFilter@a6204e4, org.springframework.security.web.header.HeaderWriterFilter@32a074ed, org.springframework.security.web.authentication.logout.LogoutFilter@525b9df4, com.example.filter.JwtAuthenticationFilter@4e20a985, com.example.filter.RequestLogFilter@67ecf7ed, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46d51d5e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b360a82, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@147097ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@102c24d1, org.springframework.security.web.session.SessionManagementFilter@29eaf100, org.springframework.security.web.access.ExceptionTranslationFilter@45017263, org.springframework.security.web.access.intercept.AuthorizationFilter@43b2e7db]
+2024-03-08 18:06:37.363  WARN 26992 --- [main] (system) ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2024-03-08 18:06:37.419  INFO 26992 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-08 18:06:37.422  INFO 26992 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-03-08 18:06:37.481  INFO 26992 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4d0b276e:0/SimpleConnection@2b9bbaa8 [delegate=amqp://admin@127.0.0.1:5672/, localPort=8231]
+2024-03-08 18:06:37.607  INFO 26992 --- [main] (system) com.example.ServerApplication            : Started ServerApplication in 4.119 seconds (process running for 4.958)
+2024-03-08 20:56:26.149  INFO 26992 --- [http-nio-8080-exec-2] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 20:56:26.162  INFO 26992 --- [http-nio-8080-exec-2] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-08 20:56:26.233  INFO 26992 --- [http-nio-8080-exec-2] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 70 ms
+2024-03-08 20:56:26.843  INFO 26992 --- [http-nio-8080-exec-2] (78914473477410816) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 20:56:27.009  INFO 26992 --- [http-nio-8080-exec-2] (78914473477410816) com.example.filter.RequestLogFilter      : 请求处理耗时: 170ms | 响应结果: 404 错误
+2024-03-08 20:58:12.171  INFO 26992 --- [http-nio-8080-exec-3] (78914915271839744) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 20:58:12.174  INFO 26992 --- [http-nio-8080-exec-3] (78914915271839744) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: 404 错误
+2024-03-08 20:58:51.027  INFO 26992 --- [http-nio-8080-exec-5] (78915078245715968) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 20:58:51.030  INFO 26992 --- [http-nio-8080-exec-5] (78915078245715968) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: 404 错误
+2024-03-08 21:00:30.416  INFO 26992 --- [http-nio-8080-exec-7] (78915495113396224) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:00:30.419  INFO 26992 --- [http-nio-8080-exec-7] (78915495113396224) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: 404 错误
+2024-03-08 21:00:51.443  INFO 26992 --- [http-nio-8080-exec-9] (78915583307026432) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:00:51.445  INFO 26992 --- [http-nio-8080-exec-9] (78915583307026432) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: 404 错误
+2024-03-08 21:02:28.050  INFO 26992 --- [http-nio-8080-exec-2] (78915988506152960) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:02:28.053  INFO 26992 --- [http-nio-8080-exec-2] (78915988506152960) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: 404 错误
+2024-03-08 21:02:58.856  INFO 26992 --- [http-nio-8080-exec-3] (78916117715881984) com.example.filter.RequestLogFilter      : 请求URL: "/monitordetail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:02:58.875  INFO 26992 --- [http-nio-8080-exec-3] (78916117715881984) com.example.filter.RequestLogFilter      : 请求处理耗时: 19ms | 响应结果: {"code":401,"data":null,"id":78916117715881984,"message":"Full authentication is required to access this resource"}
+2024-03-08 21:03:11.745  INFO 26992 --- [http-nio-8080-exec-5] (78916171772071936) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:03:11.748  INFO 26992 --- [http-nio-8080-exec-5] (78916171772071936) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: 404 错误
+2024-03-08 21:03:53.320  INFO 26992 --- [http-nio-8080-exec-7] (78916346154455040) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:03:53.322  INFO 26992 --- [http-nio-8080-exec-7] (78916346154455040) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: 404 错误
+2024-03-08 21:04:27.133  INFO 26992 --- [http-nio-8080-exec-9] (78916487976456192) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:04:27.135  INFO 26992 --- [http-nio-8080-exec-9] (78916487976456192) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: 404 错误
+2024-03-08 21:05:52.059  INFO 26992 --- [http-nio-8080-exec-2] (78916844181917696) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:05:52.061  INFO 26992 --- [http-nio-8080-exec-2] (78916844181917696) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: 404 错误
+2024-03-08 21:08:39.818  INFO 26992 --- [http-nio-8080-exec-3] (78917547814162432) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:08:39.821  INFO 26992 --- [http-nio-8080-exec-3] (78917547814162432) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: 404 错误
+2024-03-08 21:08:44.078 ERROR 26992 --- [http-nio-8080-exec-5] (78916171772071936) o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: Cannot invoke "Object.hashCode()" because "key" is null
+	at java.base/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
+	at com.example.service.impl.ClientServiceImpl.findClientByToken(ClientServiceImpl.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.example.service.impl.ClientServiceImpl$$SpringCGLIB$$0.findClientByToken(<generated>)
+	at com.example.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:45)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at com.example.filter.FlowLimitingFilter.doFilter(FlowLimitingFilter.java:51)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at com.example.filter.CorsFilter.doFilter(CorsFilter.java:34)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2024-03-08 21:13:14.097  INFO 26992 --- [http-nio-8080-exec-6] (78918698223669248) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:13:14.100  INFO 26992 --- [http-nio-8080-exec-6] (78918698223669248) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: 404 错误
+2024-03-08 21:13:44.054  INFO 26992 --- [http-nio-8080-exec-8] (78918823872434176) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/details" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:13:44.057  INFO 26992 --- [http-nio-8080-exec-8] (78918823872434176) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: 404 错误
+2024-03-08 21:16:38.432  INFO 26992 --- [http-nio-8080-exec-10] (78919555266777088) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/details" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:16:38.434  INFO 26992 --- [http-nio-8080-exec-10] (78919555266777088) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: 404 错误
+2024-03-08 21:17:17.971  INFO 26992 --- [http-nio-8080-exec-1] (78919721105362944) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/register" (GET) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:17:17.992  INFO 26992 --- [http-nio-8080-exec-1] (78919721105362944) com.example.filter.RequestLogFilter      : 请求处理耗时: 21ms | 响应结果: {"id":78919721105362944,"code":401,"data":null,"message":"注册失败"}
+2024-03-08 21:18:28.108  INFO 26992 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-03-08 21:18:28.550  INFO 26992 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-03-08 21:18:28.588  INFO 26992 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-08 21:18:28.592  INFO 26992 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-08 21:18:44.849  INFO 18932 --- [main] (system) com.example.ServerApplication            : Starting ServerApplication using Java 17.0.8 with PID 18932 (C:\Users\yang2\Desktop\monitor\monitor\server\target\classes started by yang2 in C:\Users\yang2\Desktop\monitor\monitor)
+2024-03-08 21:18:44.850  INFO 18932 --- [main] (system) com.example.ServerApplication            : The following 1 profile is active: "dev"
+2024-03-08 21:18:45.467  INFO 18932 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-08 21:18:45.469  INFO 18932 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-08 21:18:45.490  INFO 18932 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2024-03-08 21:18:45.977  INFO 18932 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-08 21:18:45.986  INFO 18932 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-08 21:18:45.986  INFO 18932 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-03-08 21:18:46.069  INFO 18932 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-08 21:18:46.070  INFO 18932 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1191 ms
+2024-03-08 21:18:46.617  INFO 18932 --- [main] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-08 21:18:46.872  INFO 18932 --- [main] (system) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2095c331
+2024-03-08 21:18:46.874  INFO 18932 --- [main] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-08 21:18:47.423  INFO 18932 --- [main] (system) o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39159b14, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57ab4b33, org.springframework.security.web.context.SecurityContextHolderFilter@45017263, org.springframework.security.web.header.HeaderWriterFilter@478fe415, org.springframework.security.web.authentication.logout.LogoutFilter@59043741, com.example.filter.JwtAuthenticationFilter@75d7297d, com.example.filter.RequestLogFilter@71418a4a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24520a51, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32a074ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dac6bc3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43b2e7db, org.springframework.security.web.session.SessionManagementFilter@31028e45, org.springframework.security.web.access.ExceptionTranslationFilter@54ef9698, org.springframework.security.web.access.intercept.AuthorizationFilter@36857d32]
+2024-03-08 21:18:47.684  WARN 18932 --- [main] (system) ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2024-03-08 21:18:47.738  INFO 18932 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-08 21:18:47.741  INFO 18932 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-03-08 21:18:47.781  INFO 18932 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3d4b45b:0/SimpleConnection@ecb8b3e [delegate=amqp://admin@127.0.0.1:5672/, localPort=3557]
+2024-03-08 21:18:47.817  INFO 18932 --- [main] (system) com.example.ServerApplication            : Started ServerApplication in 3.428 seconds (process running for 3.89)
+2024-03-08 21:18:53.463  INFO 18932 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 21:18:53.463  INFO 18932 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-08 21:18:53.464  INFO 18932 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-08 21:18:53.774  INFO 18932 --- [http-nio-8080-exec-1] (78920122928074752) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:18:54.037  INFO 18932 --- [http-nio-8080-exec-1] (78920122928074752) com.example.filter.RequestLogFilter      : 请求处理耗时: 264ms | 响应结果: {"id":78920122928074752,"code":200,"data":null,"message":"请求成功"}
+2024-03-08 21:21:40.654  INFO 18932 --- [http-nio-8080-exec-3] (78920822877720576) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 21:21:40.731  INFO 18932 --- [http-nio-8080-exec-3] (78920822877720576) com.example.filter.RequestLogFilter      : 请求处理耗时: 77ms | 响应结果: {"id":78920822877720576,"code":200,"data":null,"message":"请求成功"}
+2024-03-08 21:26:15.289  INFO 18932 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-03-08 21:26:15.813  INFO 18932 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-03-08 21:26:15.833  INFO 18932 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-08 21:26:15.839  INFO 18932 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-08 22:07:04.349  INFO 18732 --- [main] (system) com.example.ServerApplication            : Starting ServerApplication using Java 17.0.8 with PID 18732 (C:\Users\yang2\Desktop\monitor\monitor\server\target\classes started by yang2 in C:\Users\yang2\Desktop\monitor\monitor)
+2024-03-08 22:07:04.351  INFO 18732 --- [main] (system) com.example.ServerApplication            : The following 1 profile is active: "dev"
+2024-03-08 22:07:05.071  INFO 18732 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-08 22:07:05.074  INFO 18732 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-08 22:07:05.096  INFO 18732 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2024-03-08 22:07:05.664  INFO 18732 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-08 22:07:05.673  INFO 18732 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-08 22:07:05.673  INFO 18732 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-03-08 22:07:05.762  INFO 18732 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-08 22:07:05.762  INFO 18732 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1378 ms
+2024-03-08 22:07:06.338  INFO 18732 --- [main] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-08 22:07:06.626  INFO 18732 --- [main] (system) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cf01c41
+2024-03-08 22:07:06.628  INFO 18732 --- [main] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-08 22:07:07.177  INFO 18732 --- [main] (system) o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@495f7ca4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@700202fa, org.springframework.security.web.context.SecurityContextHolderFilter@75fa9254, org.springframework.security.web.header.HeaderWriterFilter@6c1a6db1, org.springframework.security.web.authentication.logout.LogoutFilter@24520a51, com.example.filter.JwtAuthenticationFilter@5939f047, com.example.filter.RequestLogFilter@2cdcfaa6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@aaa7000, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f69e2d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@556a6320, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@141234df, org.springframework.security.web.session.SessionManagementFilter@a6204e4, org.springframework.security.web.access.ExceptionTranslationFilter@673605ef, org.springframework.security.web.access.intercept.AuthorizationFilter@5e72c82a]
+2024-03-08 22:07:07.458  WARN 18732 --- [main] (system) ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2024-03-08 22:07:07.509  INFO 18732 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-08 22:07:07.513  INFO 18732 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-03-08 22:07:07.627  INFO 18732 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1b7a4930:0/SimpleConnection@1c512bb [delegate=amqp://admin@127.0.0.1:5672/, localPort=6131]
+2024-03-08 22:07:07.665  INFO 18732 --- [main] (system) com.example.ServerApplication            : Started ServerApplication in 3.801 seconds (process running for 4.611)
+2024-03-08 22:07:08.699  INFO 18732 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 22:07:08.700  INFO 18732 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-08 22:07:08.701  INFO 18732 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-08 22:07:09.055  INFO 18732 --- [http-nio-8080-exec-1] (78932266612559872) com.example.filter.RequestLogFilter      : 请求URL: "/api/auth/login" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {"username":"test","password":"123456"}
+2024-03-08 22:07:09.314  INFO 18732 --- [http-nio-8080-exec-1] (78932266612559872) com.example.filter.RequestLogFilter      : 请求处理耗时: 261ms | 响应结果: {"code":401,"data":null,"id":78932266612559872,"message":"用户名或密码错误"}
+2024-03-08 22:07:14.516  INFO 18732 --- [http-nio-8080-exec-3] (78932289526042624) com.example.filter.RequestLogFilter      : 请求URL: "/api/auth/login" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {"username":"admin","password":"123456"}
+2024-03-08 22:07:14.624  INFO 18732 --- [http-nio-8080-exec-3] (78932289526042624) com.example.filter.RequestLogFilter      : 请求处理耗时: 108ms | 响应结果: {"code":200,"data":{"expire":"2024-03-11 22:07:14.618","role":"admin","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiYWRtaW4iLCJpZCI6MSwiZXhwIjoxNzEwMTY2MDM0LCJpYXQiOjE3MDk5MDY4MzQsImp0aSI6IjcwMGJmYzAyLTY4ZWMtNDY2ZS04MmRlLWRhNTAxNWM5NWQwOCIsImF1dGhvcml0aWVzIjpbIlJPTEVfYWRtaW4iXX0.TCcNWGaxqTHXCD24nOiUcuZnwvWTM2SnO-SME27N3nY","username":"admin"},"id":78932289526042624,"message":"请求成功"}
+2024-03-08 22:07:16.642  INFO 18732 --- [http-nio-8080-exec-10] (78932298443132928) com.example.filter.RequestLogFilter      : 请求URL: "/api/auth/logout" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 22:07:16.662  INFO 18732 --- [http-nio-8080-exec-10] (78932298443132928) com.example.filter.RequestLogFilter      : 请求处理耗时: 20ms | 响应结果: 
+2024-03-08 22:08:14.691  INFO 18732 --- [http-nio-8080-exec-7] (78932541918285824) com.example.filter.RequestLogFilter      : 请求URL: "/monitor/detail" (POST) | 远程IP地址: 127.0.0.1 │ 身份: 未验证 | 请求参数列表: {}
+2024-03-08 22:08:14.830  INFO 18732 --- [http-nio-8080-exec-7] (78932541918285824) com.example.filter.RequestLogFilter      : 请求处理耗时: 139ms | 响应结果: {"id":78932541918285824,"code":200,"data":null,"message":"请求成功"}
+2024-03-08 23:27:43.643  INFO 18732 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-03-08 23:27:43.684  INFO 18732 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-03-08 23:27:43.865  INFO 18732 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-08 23:27:43.881  INFO 18732 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

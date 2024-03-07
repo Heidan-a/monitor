@@ -1,0 +1,6 @@
+## Client
+
+每个client端记录一个connectConfig信息，包含服务器端地址address和本台主机连接服务器的token
+	在第一次注册连接成功后，客户端会有json文件保存，下一次连接时只要有文件就能直接连，不需要文件正确性，但是调用接口时用到的时json里的数据了，如果有误或者恶意更改token肯定是无法请求的，所以也算是做了安全保护，可以试着在每一次连接后回表查token然后每次请求比较一下
+
+client的register通过携带服务器生成的token在请求头里进行注册client表，并且在ServerConfiguration类中使用run方法，使得每次client主机连接到服务端都会调用一次updateBaseDetail来更新主机最新硬件数据信息
