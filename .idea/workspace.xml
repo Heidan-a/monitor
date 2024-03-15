@@ -4,46 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d68cd4e-c385-48c0-a0f6-dbf48e06938c" name="Changes" comment="配置好c/s通信注册">
-      <change afterPath="$PROJECT_DIR$/log/2024-03-10-spring-0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/2024-03-11-spring-0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/2024-03-12-spring-0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/2024-03-13-spring-0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/controller/MonitorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/request/RenameClientVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/request/RenameNodeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/response/ClientDetailsVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/response/ClientPreviewVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/response/RuntimeHistoryVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/cpu-icons/AMD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/cpu-icons/Apple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/cpu-icons/Intel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/monitor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/assets/css/element.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/component/ClientDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/component/PreviewCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/component/TabItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/util/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/views/Manage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/views/Security.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7d68cd4e-c385-48c0-a0f6-dbf48e06938c" name="Changes" comment="配置好信息基础页面和运行时数获取">
+      <change afterPath="$PROJECT_DIR$/web/src/echarts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/2024-03-09-spring-0.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/2024-03-09-spring-0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/entity/dto/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/dto/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/filter/RequestLogFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/filter/RequestLogFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/utils/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/utils/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/utils/InfluxdbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/utils/InfluxdbUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/2024-03-15-spring-0.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/2024-03-15-spring-0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/IndexView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/component/ClientDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/ClientDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/component/RuntimeHistory.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/RuntimeHistory.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +23,9 @@
       <list>
         <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="Vue Composition API Component" />
         <option value="Less File" />
         <option value="Class" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -114,6 +82,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yang2\Desktop\monitor\monitor\web\src\echarts" />
       <recent name="C:\Users\yang2\Desktop\monitor\monitor\web\public\cpu-icons" />
       <recent name="C:\Users\yang2\Desktop\monitor\monitor\web\src\assets\css" />
       <recent name="C:\Users\yang2\Desktop\monitor\monitor\web\public" />
@@ -131,7 +100,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="Spring Boot.ClientApplication">
     <configuration name="ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ClientApplication" />
@@ -181,6 +150,7 @@
       <workItem from="1710219571930" duration="13675000" />
       <workItem from="1710306925935" duration="21000" />
       <workItem from="1710333251029" duration="6631000" />
+      <workItem from="1710484390630" duration="1296000" />
     </task>
     <task id="LOCAL-00001" summary="配置好c/s通信注册">
       <option name="closed" value="true" />
@@ -206,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709987929425</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="配置好信息基础页面和运行时数获取">
+      <option name="closed" value="true" />
+      <created>1710484481476</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710484481476</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +206,8 @@
     <MESSAGE value="init project" />
     <MESSAGE value="配置运行时数据上传" />
     <MESSAGE value="配置好c/s通信注册" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置好c/s通信注册" />
+    <MESSAGE value="配置好信息基础页面和运行时数获取" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置好信息基础页面和运行时数获取" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

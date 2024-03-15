@@ -3,6 +3,8 @@ import {computed, reactive, watch} from "vue";
 import {get, post} from "@/net";
 import {copyIp, cpuNameToImage, fitByUnit, osNameToIcon, percentageToStatus, rename} from "@/util";
 import {ElMessage} from "element-plus";
+import RuntimeHistory from "@/component/RuntimeHistory.vue";
+
 
 
 const locations = [
@@ -205,7 +207,7 @@ watch(() => props.id, init, { immediate: true })
                             </div>
                         </div>
                     </div>
-                    <runtime-history style="margin-top: 20px" :data="details.runtime.list"/>
+                   <runtime-history :data="details.runtime.list"/>
                 </div>
                 <el-empty description="服务器处于离线状态，请检查服务器是否正常运行" v-else/>
             </div>
