@@ -77,7 +77,7 @@ const props = defineProps({
 
 .instance-card{
     padding: 15px;
-    width: 340px;
+    max-width: 340px;
     background-color: var(--el-bg-color);
     border-radius: 5px;
     box-sizing: border-box;

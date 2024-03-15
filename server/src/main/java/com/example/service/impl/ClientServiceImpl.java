@@ -31,17 +31,18 @@ public class ClientServiceImpl extends ServiceImpl<ClientMapper, Client> impleme
     @Resource
     ClientDetailMapper clientDetailMapper;
 
-    @Resource
-    ClientMapper clientMapper;
 
     @Resource
     InfluxdbUtil influx;
+    //每次注册完一台后都更新
     private String registerToken = this.generateNewToken();
     private final Map<Integer,Client> clientIdCache = new ConcurrentHashMap<>();
     private final Map<String,Client> clientTokenCache = new ConcurrentHashMap<>();
 
     @PostConstruct
     private void initClientCache(){
+        clientIdCache.clear();
+        clientTokenCache.clear();
         this.list().forEach(this::addClientCache);
     }
 
@@ -96,6 +97,14 @@ public class ClientServiceImpl extends ServiceImpl<ClientMapper, Client> impleme
         }
         System.out.println(sb);
         return sb.toString();
+    }
+
+    @Override
+    public void deleteClient(int clientId) {
+        this.removeById(clientId);
+        clientDetailMapper.deleteById(clientId);
+        currentRuntime.remove(clientId);
+        this.initClientCache();
     }
 
     @Override

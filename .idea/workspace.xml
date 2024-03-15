@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d68cd4e-c385-48c0-a0f6-dbf48e06938c" name="Changes" comment="配置好信息基础页面和运行时数获取">
-      <change afterPath="$PROJECT_DIR$/web/src/echarts/index.js" afterDir="false" />
+    <list default="true" id="7d68cd4e-c385-48c0-a0f6-dbf48e06938c" name="Changes" comment="配置好运行时信息折线图显示">
+      <change afterPath="$PROJECT_DIR$/web/src/component/RegisterCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/server.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/2024-03-15-spring-0.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/2024-03-15-spring-0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/controller/MonitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/controller/MonitorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/ClientServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/component/ClientDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/ClientDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/component/RuntimeHistory.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/RuntimeHistory.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/component/PreviewCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/PreviewCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/Manage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/Manage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +156,7 @@
       <workItem from="1710219571930" duration="13675000" />
       <workItem from="1710306925935" duration="21000" />
       <workItem from="1710333251029" duration="6631000" />
-      <workItem from="1710484390630" duration="1296000" />
+      <workItem from="1710484390630" duration="6217000" />
     </task>
     <task id="LOCAL-00001" summary="配置好c/s通信注册">
       <option name="closed" value="true" />
@@ -184,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710484481476</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="配置好运行时信息折线图显示">
+      <option name="closed" value="true" />
+      <created>1710485926329</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710485926329</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +221,8 @@
     <MESSAGE value="配置运行时数据上传" />
     <MESSAGE value="配置好c/s通信注册" />
     <MESSAGE value="配置好信息基础页面和运行时数获取" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置好信息基础页面和运行时数获取" />
+    <MESSAGE value="配置好运行时信息折线图显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置好运行时信息折线图显示" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

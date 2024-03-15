@@ -37,4 +37,5 @@ public class ClientController {
         clientService.updateRuntimeDetail(vo,client);
         return RestBean.success();
     }
+
 }
