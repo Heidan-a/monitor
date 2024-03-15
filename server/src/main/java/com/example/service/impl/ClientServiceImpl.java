@@ -1,10 +1,17 @@
 package com.example.service.impl;
 
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.entity.dto.Client;
 import com.example.entity.dto.ClientDetail;
+import com.example.entity.dto.RuntimeData;
 import com.example.entity.vo.request.ClientDetailVO;
+import com.example.entity.vo.request.RenameClientVO;
+import com.example.entity.vo.request.RenameNodeVO;
 import com.example.entity.vo.request.RuntimeDetailVO;
+import com.example.entity.vo.response.ClientDetailsVO;
+import com.example.entity.vo.response.ClientPreviewVO;
+import com.example.entity.vo.response.RuntimeHistoryVO;
 import com.example.mapper.ClientDetailMapper;
 import com.example.mapper.ClientMapper;
 import com.example.service.ClientService;
@@ -15,10 +22,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
-import java.util.Date;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
@@ -26,6 +30,9 @@ public class ClientServiceImpl extends ServiceImpl<ClientMapper, Client> impleme
 
     @Resource
     ClientDetailMapper clientDetailMapper;
+
+    @Resource
+    ClientMapper clientMapper;
 
     @Resource
     InfluxdbUtil influx;
@@ -59,6 +66,19 @@ public class ClientServiceImpl extends ServiceImpl<ClientMapper, Client> impleme
     }
 
     @Override
+    public RuntimeHistoryVO clientRuntimeDetailsHistory(int clientId) {
+        RuntimeHistoryVO vo = influx.readRuntimeData(clientId);
+        ClientDetail detail = clientDetailMapper.selectById(clientId);
+        BeanUtils.copyProperties(detail, vo);
+        return vo;
+    }
+
+    @Override
+    public RuntimeDetailVO clientRuntimeDetailsNow(int clientId) {
+        return currentRuntime.get(clientId);
+    }
+
+    @Override
     public String registerToken() {
         return registerToken;
     }
@@ -89,6 +109,18 @@ public class ClientServiceImpl extends ServiceImpl<ClientMapper, Client> impleme
     }
 
     @Override
+    public ClientDetailsVO clientDetails(int clientId) {
+        ClientDetailsVO vo = this.clientIdCache.get(clientId).asViewObject(ClientDetailsVO.class);
+        BeanUtils.copyProperties(clientDetailMapper.selectById(clientId),vo);
+        vo.setOnline(isOnline(currentRuntime.get(clientId)));
+        return vo;
+    }
+
+    private boolean isOnline(RuntimeDetailVO vo){
+        return vo != null &&  System.currentTimeMillis() - vo.getTimestamp() < 60 * 1000;
+    }
+
+    @Override
     public void updateClientDetail(ClientDetailVO vo, Client client) {
         ClientDetail detail = new ClientDetail();
         BeanUtils.copyProperties(vo, detail);
@@ -100,7 +132,33 @@ public class ClientServiceImpl extends ServiceImpl<ClientMapper, Client> impleme
         }
     }
 
+    @Override
+    public void renameClient(RenameClientVO vo) {
+        this.update(Wrappers.<Client>update().eq("id",vo.getId()).set("name",vo.getName()));
+        this.initClientCache();
+    }
+
+    @Override
+    public void renameNode(RenameNodeVO vo) {
+        this.update(Wrappers.<Client>update().eq("id",vo.getId()).set("node",vo.getNode()).set("location",vo.getLocation()));
+        this.initClientCache();
+    }
+
     private final Map<Integer, RuntimeDetailVO> currentRuntime = new ConcurrentHashMap<>();
+
+    @Override
+    public List<ClientPreviewVO> listClients() {
+        return clientIdCache.values().stream().map(client -> {
+            ClientPreviewVO vo = client.asViewObject(ClientPreviewVO.class);
+            BeanUtils.copyProperties(clientDetailMapper.selectById(vo.getId()),vo);
+            RuntimeDetailVO runtime = currentRuntime.get(vo.getId());
+            if(this.isOnline(runtime)){
+                BeanUtils.copyProperties(runtime,vo);
+                vo.setOnline(true);
+            }
+            return vo;
+        }).toList();
+    }
 
     /**
      * 往influx写入数据，并且写入currentRuntime中
