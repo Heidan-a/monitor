@@ -2,14 +2,8 @@ package com.example.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.entity.dto.Client;
-import com.example.entity.vo.request.ClientDetailVO;
-import com.example.entity.vo.request.RenameClientVO;
-import com.example.entity.vo.request.RenameNodeVO;
-import com.example.entity.vo.request.RuntimeDetailVO;
-import com.example.entity.vo.response.ClientDetailsVO;
-import com.example.entity.vo.response.ClientPreviewVO;
-import com.example.entity.vo.response.ClientSimpleVO;
-import com.example.entity.vo.response.RuntimeHistoryVO;
+import com.example.entity.vo.request.*;
+import com.example.entity.vo.response.*;
 import com.example.utils.Const;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.RequestAttribute;
@@ -32,4 +26,6 @@ public interface ClientService extends IService<Client> {
     RuntimeHistoryVO clientRuntimeDetailsHistory(int clientId);
     RuntimeDetailVO clientRuntimeDetailsNow(int clientId);
     void deleteClient(int clientId);
+    void saveSshConnection(SshConnectionVO vo);
+    SshSettingsVO getSshSetting(int clientId);
 }

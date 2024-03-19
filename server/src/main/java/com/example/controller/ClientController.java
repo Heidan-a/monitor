@@ -4,6 +4,7 @@ import com.example.entity.RestBean;
 import com.example.entity.dto.Client;
 import com.example.entity.vo.request.ClientDetailVO;
 import com.example.entity.vo.request.RuntimeDetailVO;
+import com.example.entity.vo.request.SshConnectionVO;
 import com.example.service.ClientService;
 import com.example.utils.Const;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -40,7 +41,6 @@ public class ClientController {
         return RestBean.success();
     }
 
-    @PostMapping("save-ssh")
-    public RestBean<Void> saveSshConnection(@RequestBody @Valid)
+
 
 }

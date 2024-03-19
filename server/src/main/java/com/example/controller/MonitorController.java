@@ -5,6 +5,7 @@ import com.example.entity.dto.Account;
 import com.example.entity.vo.request.RenameClientVO;
 import com.example.entity.vo.request.RenameNodeVO;
 import com.example.entity.vo.request.RuntimeDetailVO;
+import com.example.entity.vo.request.SshConnectionVO;
 import com.example.entity.vo.response.*;
 import com.example.service.AccountService;
 import com.example.service.ClientService;
@@ -125,6 +126,27 @@ public class MonitorController {
         }
     }
 
+    @PostMapping("/ssh-save")
+    public RestBean<Void> saveSshConnection(@RequestBody @Valid SshConnectionVO vo,
+                                            @RequestAttribute(Const.ATTR_USER_ID) int userId,
+                                            @RequestAttribute(Const.ATTR_USER_ROLE) String userRole){
+        if(this.permissionCheck(userId,userRole,vo.getId())){
+            service.saveSshConnection(vo);
+            return RestBean.success();
+        }else {
+            return RestBean.noPermission();
+        }
+    }
+    @GetMapping("/ssh")
+    public RestBean<SshSettingsVO> sshSettings(int clientId,
+                                               @RequestAttribute(Const.ATTR_USER_ID) int userId,
+                                               @RequestAttribute(Const.ATTR_USER_ROLE) String userRole) {
+        if(this.permissionCheck(userId, userRole, clientId)) {
+            return RestBean.success(service.getSshSetting(clientId));
+        } else {
+            return RestBean.noPermission();
+        }
+    }
 
     private List<Integer> accountAccessClients(int uid) {
         Account account = accountService.getById(uid);

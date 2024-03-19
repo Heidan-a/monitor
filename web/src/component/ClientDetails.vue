@@ -4,9 +4,7 @@ import {get, post} from "@/net";
 import {copyIp, cpuNameToImage, fitByUnit, osNameToIcon, percentageToStatus, rename} from "@/util";
 import {ElMessage, ElMessageBox} from "element-plus";
 import RuntimeHistory from "@/component/RuntimeHistory.vue";
-import {Delete} from "@element-plus/icons-vue";
-
-
+import {Connection, Delete} from "@element-plus/icons-vue";
 
 const locations = [
     {name: 'cn', desc: '中国大陆'},
@@ -18,7 +16,7 @@ const locations = [
     {name: 'de', desc: '德国'}
 ]
 
-const emits = defineEmits(['delete'])
+const emits = defineEmits(['delete','terminal'])
 const props = defineProps({
     id: Number,
     update: Function
@@ -106,7 +104,8 @@ watch(() => props.id, init, { immediate: true })
                        </div>
                    </div>
                    <div>
-                       <el-button @click="deleteClient" :icon="Delete" type="danger" plain>删除此主机</el-button>
+                       <el-button @click="emits('terminal',id)" :icon="Connection" type="primary" plain>Ssh远程连接</el-button>
+                     <el-button @click="deleteClient" :icon="Delete" type="danger" plain>删除此主机</el-button>
                    </div>
                </div>
                 <el-divider style="margin: 10px 0"/>

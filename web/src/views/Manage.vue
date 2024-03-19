@@ -8,6 +8,7 @@ import {Plus} from "@element-plus/icons-vue";
 import RegisterCard from "@/component/RegisterCard.vue";
 import { useRoute } from "vue-router";
 import {useStore} from "@/store";
+import TerminalWindow from "@/component/TerminalWindow.vue";
 
 const locations = [
     {name: 'cn', desc: '中国大陆'},
@@ -52,6 +53,16 @@ const refreshToken = () =>{
 }
 setInterval(updateList,10 * 1000)
 updateList()
+
+function openTerminal(id) {
+  terminal.show = true
+  terminal.id = id
+  detail.show = false
+}
+const terminal = reactive({
+  show: false,
+  id: -1
+})
 </script>
 
 <template>
@@ -80,10 +91,23 @@ updateList()
         </div>
         <el-empty v-else description="还没有任何主机哦，快点击右上角注册一个吧"></el-empty>
         <el-drawer size="520" :show-close="false" :with-header="false" v-model="detail.show" v-if="list.length" @close="detail.id = -1">
-            <client-details :id="detail.id" :update="updateList" @delete="updateList"></client-details>
+            <client-details :id="detail.id" :update="updateList" @delete="updateList" @terminal="openTerminal"></client-details>
         </el-drawer>
         <el-drawer @open="refreshToken" v-model="register.show" direction="btt" :with-header="false" style="min-height: 350px;max-width: 800px;margin: 10px auto">
             <register-card :token="register.token"></register-card>
+        </el-drawer>
+        <el-drawer style="width: 800px;margin: 10px auto" :size="520" direction="btt"
+                 @close="terminal.id = -1"
+                 v-model="terminal.show" :close-on-click-modal="false">
+          <template #header>
+            <div>
+              <div style="font-size: 18px;color: dodgerblue;font-weight: bold;">SSH远程连接</div>
+              <div style="font-size: 14px">
+              远程连接的建立将由服务端完成，因此在内网环境下也可以正常使用。
+              </div>
+            </div>
+          </template>
+         <terminal-window :id="terminal.id"/>
         </el-drawer>
     </div>
 </template>
