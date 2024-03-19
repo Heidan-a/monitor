@@ -4,20 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d68cd4e-c385-48c0-a0f6-dbf48e06938c" name="Changes" comment="配置好运行时信息折线图显示">
-      <change afterPath="$PROJECT_DIR$/web/src/component/RegisterCard.vue" afterDir="false" />
+    <list default="true" id="7d68cd4e-c385-48c0-a0f6-dbf48e06938c" name="Changes" comment="添加删除主机和根据地区显示主机功能">
+      <change afterPath="$PROJECT_DIR$/config/server.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/2024-03-18-spring-0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/log/2024-03-18-spring-0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/request/ChangePasswordVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/request/CreateSubAccountVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/request/ModifyEmailVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/response/ClientSimpleVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/response/SubAccountVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/component/CreateSubAccount.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/server.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/2024-03-08-spring-0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/2024-03-09-spring-0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/2024-03-10-spring-0.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/2024-03-15-spring-0.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/2024-03-15-spring-0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/controller/AuthorizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/controller/AuthorizeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/controller/MonitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/controller/MonitorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/entity/RestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/RestBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/entity/dto/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/dto/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/response/AuthorizeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/entity/vo/response/AuthorizeVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/listener/MailQueueListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/listener/MailQueueListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/AccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/service/impl/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/component/ClientDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/ClientDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/component/PreviewCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/PreviewCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/utils/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/utils/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/utils/InfluxdbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/utils/InfluxdbUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/utils/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/net/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/net/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/IndexView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/Manage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/Manage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/Security.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/Security.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,19 +56,29 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="JavaScript File" />
         <option value="Less File" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="Vue Composition API Component" />
+        <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="false" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -51,41 +90,48 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;liberica-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yang2/Desktop/monitor/monitor&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;bb9d6e2e09c4e2305b052de906e345d2&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Maven.server [clean].executor": "Run",
+    "Maven.server [test].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ClientApplication.executor": "Run",
+    "Spring Boot.ServerApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "liberica-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/yang2/Desktop/monitor/monitor",
+    "list.type.of.created.stylesheet": "Less",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "spring.configuration.checksum": "bb9d6e2e09c4e2305b052de906e345d2",
+    "ts.external.directory.path": "C:\\Users\\yang2\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yang2\Desktop\monitor\monitor\web\src\echarts" />
@@ -106,7 +152,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ClientApplication">
+  <component name="RunManager" selected="Spring Boot.ServerApplication">
     <configuration name="ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ClientApplication" />
@@ -121,6 +167,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/web/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/web/package.json" />
       <command value="run" />
@@ -134,8 +190,16 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -156,7 +220,18 @@
       <workItem from="1710219571930" duration="13675000" />
       <workItem from="1710306925935" duration="21000" />
       <workItem from="1710333251029" duration="6631000" />
-      <workItem from="1710484390630" duration="6217000" />
+      <workItem from="1710484390630" duration="7006000" />
+      <workItem from="1710498961348" duration="319000" />
+      <workItem from="1710499295300" duration="222000" />
+      <workItem from="1710500094988" duration="161000" />
+      <workItem from="1710503160262" duration="515000" />
+      <workItem from="1710503690115" duration="1034000" />
+      <workItem from="1710504744523" duration="167000" />
+      <workItem from="1710505707952" duration="2924000" />
+      <workItem from="1710509646817" duration="2192000" />
+      <workItem from="1710512469041" duration="38000" />
+      <workItem from="1710563022678" duration="314000" />
+      <workItem from="1710740837612" duration="8466000" />
     </task>
     <task id="LOCAL-00001" summary="配置好c/s通信注册">
       <option name="closed" value="true" />
@@ -198,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710485926329</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加删除主机和根据地区显示主机功能">
+      <option name="closed" value="true" />
+      <created>1710491960003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710491960003</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +305,8 @@
     <MESSAGE value="配置好c/s通信注册" />
     <MESSAGE value="配置好信息基础页面和运行时数获取" />
     <MESSAGE value="配置好运行时信息折线图显示" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置好运行时信息折线图显示" />
+    <MESSAGE value="添加删除主机和根据地区显示主机功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加删除主机和根据地区显示主机功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

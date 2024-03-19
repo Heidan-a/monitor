@@ -31,7 +31,7 @@ public class InfluxdbUtil {
         String ORG = "heidan";
         @PostConstruct
         public void init(){
-            client = InfluxDBClientFactory.create(url,user,password.toCharArray());
+            client = InfluxDBClientFactory.create(url,"heidan",password.toCharArray());
         }
 
         public void writeRuntimeData(int clientId, RuntimeDetailVO vo){

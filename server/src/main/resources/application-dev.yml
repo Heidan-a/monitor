@@ -4,14 +4,17 @@ springdoc:
   swagger-ui:
     operations-sorter: alpha
 spring:
+  data:
+    redis:
+      password: 123456
   influx:
     url: http://localhost:8086
-    user: influxdb
+    user: heidan
     password: influxdb
   mail:
     host: smtp.163.com
-    username: javastudy111@163.com
-    password: VKQFYZMUSUZGSGEG
+    username: heidan20231@163.com
+    password: UKCVZLFDJMEZLPFT
   rabbitmq:
     addresses: localhost
     username: admin
@@ -37,9 +40,10 @@ spring:
       mail-limit: 60
     flow:
       period: 5
-      limit: 120
+      limit: 300
       block: 30
     cors:
       origin: '*'
       credentials: false
       methods: '*'
+

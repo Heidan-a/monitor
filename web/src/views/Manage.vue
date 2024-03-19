@@ -6,6 +6,8 @@ import {computed, reactive, ref} from "vue";
 import ClientDetails from "@/component/ClientDetails.vue";
 import {Plus} from "@element-plus/icons-vue";
 import RegisterCard from "@/component/RegisterCard.vue";
+import { useRoute } from "vue-router";
+import {useStore} from "@/store";
 
 const locations = [
     {name: 'cn', desc: '中国大陆'},
@@ -16,7 +18,8 @@ const locations = [
     {name: 'kr', desc: '韩国'},
     {name: 'de', desc: '德国'}
 ]
-
+const store = useStore()
+const route = useRoute()
 const checkedNodes = ref([])
 
 const clientList = computed(() => {
@@ -36,9 +39,10 @@ const displayClientDetail = (id) => {
     detail.show = true
     detail.id = id
 }
-const updateList = () => get('/api/monitor/list',data => {
-    list.value = data
-})
+const updateList = () =>{ 
+    if(route.name === 'manage')
+        get('/api/monitor/list',data => list.value = data)
+}
 const register = reactive({
     show:false,
     token:''
@@ -58,7 +62,7 @@ updateList()
                <div class="desc">这里是主机实例管理列表，你可以在这里管理你的主机</div>
            </div>
             <div>
-                <el-button type="primary" :icon="Plus" @click="register.show = true" >添加新主机</el-button>
+                <el-button type="primary" :icon="Plus" @click="register.show = true" :disabled="!store.isAdmin">添加新主机</el-button>
             </div>
         </div>
 
